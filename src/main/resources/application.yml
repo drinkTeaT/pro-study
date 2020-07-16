@@ -1,7 +1,0 @@
-server:
-  port: 9000
-
-log:
-  log-default-file: INFO_LOG
-  log-level: info
-  log-root: /home/logs/tacbin/sm_log

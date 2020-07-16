@@ -1,0 +1,19 @@
+server:
+  port: 9000
+
+spring:
+  application:
+    name: dubbo-registry-zookeeper-consumer
+
+log:
+  log-default-file: INFO_LOG
+  log-level: info
+  log-root: /home/logs/tacbin/sm_log
+
+embedded:
+  zookeeper:
+    port: 2181
+
+dubbo:
+  registry:
+    address: zookeeper://127.0.0.1:${embedded.zookeeper.port}

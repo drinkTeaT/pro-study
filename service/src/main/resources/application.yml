@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: dubbo-registry-zookeeper-provider
+dubbo:
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: zookeeper://127.0.0.1:2181
+  scan:
+    base-packages: com.tacbin.pro.react.service
+
+log:
+  log-default-file: INFO_LOG
+  log-level: info
+  log-root: /home/logs/tacbin/sm_log
