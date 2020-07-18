@@ -6,7 +6,7 @@ spring:
     name: dubbo-registry-zookeeper-consumer
 
 log:
-  log-default-file: INFO_LOG
+  log-default-file: INFO_LOG # -Dlog.log-default-file=CONSOLE_LOG
   log-level: info
   log-root: /home/logs/tacbin/sm_log
 
@@ -17,3 +17,5 @@ embedded:
 dubbo:
   registry:
     address: zookeeper://127.0.0.1:${embedded.zookeeper.port}
+  consumer:
+    filter: traceFilter

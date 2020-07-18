@@ -1,6 +1,8 @@
 spring:
   application:
     name: dubbo-registry-zookeeper-provider
+  main:
+    web-application-type: none #非web
 dubbo:
   protocol:
     name: dubbo
@@ -9,8 +11,10 @@ dubbo:
     address: zookeeper://127.0.0.1:2181
   scan:
     base-packages: com.tacbin.pro.react.service
+  provider:
+    filter: traceFilter
 
 log:
-  log-default-file: INFO_LOG
+  log-default-file: INFO_LOG # -Dlog.log-default-file=CONSOLE_LOG
   log-level: info
   log-root: /home/logs/tacbin/sm_log
