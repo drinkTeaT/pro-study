@@ -1,5 +1,6 @@
 package com.tacbin.pro.react.web.log;
 
+import org.apache.dubbo.common.constants.CommonConstants;
 import org.apache.dubbo.common.extension.Activate;
 import org.apache.dubbo.common.utils.StringUtils;
 import org.apache.dubbo.config.annotation.Service;
@@ -13,7 +14,7 @@ import java.util.UUID;
  * @description
  * @date 2020/7/16 14:40
  */
-@Activate
+@Activate(group = CommonConstants.CONSUMER)
 public class TraceFilter implements Filter {
     private static final String UNIQUE_ID = "traceId";
 
